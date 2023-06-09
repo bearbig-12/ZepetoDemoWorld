@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: 691e4a3763634420db73d15b4a416cfb
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass RotateTrigger extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n        super(...arguments);\r\n       
+    this.isTriggered = false;\r\n    }\r\n    Start() {\r\n        // Zepeto character
+    object\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n    }\r\n    OnTriggerEnter(collider) {\r\n        if (this.zepetoCharacter
+    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, this.zepetoCharacter.gameObject))
+    {\r\n            return;\r\n        }\r\n        this.isTriggered = true;\r\n   
+    }\r\n}\r\nexports.default = RotateTrigger;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUm90YXRlVHJpZ2dlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlJvdGF0ZVRyaWdnZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsNkVBQTRFO0FBQzVFLGlEQUFxRDtBQUVyRCxNQUFxQixhQUFjLFNBQVEscUNBQXFCO0lBQWhFOztRQUdXLGdCQUFXLEdBQVMsS0FBSyxDQUFDO0lBb0JyQyxDQUFDO0lBbEJHLEtBQUs7UUFDRCwwQkFBMEI7UUFDMUIsMkNBQWEsQ0FBQyxRQUFRLENBQUMsa0JBQWtCLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUN2RCxJQUFJLENBQUMsZUFBZSxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDO1FBQ3JGLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVELGNBQWMsQ0FBQyxRQUFrQjtRQUU3QixJQUFJLElBQUksQ0FBQyxlQUFlLElBQUksSUFBSSwyQkFTMHhVLGFBQWMsQ0FUcHlVLFFBQVEsQ0FBQyxVQUFVLEVBQUksSUFBSSxDQUFDLGVBQWUsQ0FBQyxVQUFVLENBQUEsRUFBRTtZQUN4RixPQUFPO1NBQ1Y7UUFFRCxJQUFJLENBQUMsV0FBVyxHQUFHLElBQUksQ0FBQztJQUc1QixDQUFDO0NBRUo7QUF2QkQsZ0NBdUJDIn0=","assetPath":"Assets/Script/RotateTrigger.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"isTriggered","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"RotateTrigger","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 0e8b7cc7015a687ca929581328b10535
+  onlyWriteTrigger: 0

@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: f305f24132916462abcf3d60f9369072
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nclass AttachCharacter extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        // Zepeto
+    character object\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n    }\r\n    OnTriggerEnter(collider) {\r\n        if (this.zepetoCharacter
+    == null) {\r\n            console.log(\"Character is not loaded\");\r\n           
+    return;\r\n        }\r\n        console.log(\"Character is Enter the zone\");\r\n       
+    this.zepetoCharacter.characterController.transform.parent = this.transform;\r\n   
+    }\r\n    onTriggerExit(collider) {\r\n        if (__UnityEngine__.Object.op_Equality(collider.gameObject,
+    this.zepetoCharacter.gameObject)) {\r\n            this.zepetoCharacter.transform.parent
+    = null;\r\n        }\r\n    }\r\n}\r\nexports.default = AttachCharacter;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQXR0YWNoQ2hhcmFjdGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQXR0YWNoQ2hhcmFjdGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLGlEQUFxRDtBQUVyRCw2RUFBNEU7QUFFNUUsTUFBcUIsZUFBZ0IsU0FBUSxxQ0FBcUI7SUFJOUQsS0FBSztRQUNELDBCQUEwQjtRQUMxQiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3ZELElBQUksQ0FBQyxlQUFlLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUM7UUFDckYsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0lBRUQsY0FBYyxDQUFDLFFBQWtCO1FBRTdCLElBQUksSUFBSSxDQUFDLGVBQWUsSUFBSSxJQUFJLEVBQUc7WUFDL0IsT0FBTyxDQUFDLEdBQUcsQ0FBQyx5QkFBeUIsQ0FBQyxDQUFDO1lBQ3ZDLE9BQU87U0FDVjtRQUNELE9BQU8sQ0FBQyxHQUFHLENBQUMsNkJBQTZCLENBQUMsQ0FBQztRQUUzQyxJQUFJLENBQUMsZUFBZSxDQUFDLG1CQUFtQixDQUFDLFNBQVMsQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQztJQUsvRSxDQUFDO0lBQ0QsYUFBYSxDQUFDLFFBQWtCO1FBRTVCLDJCQU1zL1QsV0FBWSxDQU4vL1QsUUFBUSxDQUFDLFVBQVUsRUFBSSxJQUFJLENBQUMsZUFBZSxDQUFDLFVBQVUsR0FDekQ7WUFDSSxJQUFJLENBQUMsZUFBZSxDQUFDLFNBQVMsQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDO1NBQ2hEO0lBRUwsQ0FBQztDQUNKO0FBakNELGtDQWlDQyJ9","assetPath":"Assets/Script/AttachCharacter.ts","manifest":{"properties":[],"name":"AttachCharacter","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: fa8db212239ba6c2974e962538e55a2d
+  onlyWriteTrigger: 0

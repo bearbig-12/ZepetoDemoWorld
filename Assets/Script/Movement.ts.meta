@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: 953f62d3e41f84fc4bf803598aecb8a9
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nclass Movement extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.movingTime
+    = 1;\r\n        this.movingRnageX = 0;\r\n        this.movingRangeY = 0;\r\n       
+    this.delta = 0;\r\n        this.movementFlag = true;\r\n    }\r\n    Start()
+    {\r\n        console.log(\"Movement Script Loaded\");\r\n    }\r\n    Update()
+    {\r\n        this.delta += UnityEngine_1.Time.deltaTime;\r\n        if (this.delta
+    > this.movingTime) {\r\n            this.delta = 0;\r\n            this.movementFlag
+    = !this.movementFlag;\r\n        }\r\n        if (this.movementFlag == true)
+    {\r\n            // Move UpWard\r\n            this.transform.Translate(this.movingRnageX
+    * UnityEngine_1.Time.deltaTime, this.movingRangeY * UnityEngine_1.Time.deltaTime,
+    0);\r\n        }\r\n        else {\r\n            // Move DownWard\r\n           
+    this.transform.Translate(-1 * this.movingRnageX * UnityEngine_1.Time.deltaTime,
+    -1 * this.movingRangeY * UnityEngine_1.Time.deltaTime, 0);\r\n        }\r\n   
+    }\r\n}\r\nexports.default = Movement;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW92ZW1lbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJNb3ZlbWVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFzRDtBQUN0RCw2Q0FBd0U7QUFFeEUsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQUEzRDs7UUFHVyxlQUFVLEdBQVcsQ0FBQyxDQUFDO1FBQ3ZCLGlCQUFZLEdBQVcsQ0FBQyxDQUFDO1FBQ3pCLGlCQUFZLEdBQVcsQ0FBQyxDQUFDO1FBQ3pCLFVBQUssR0FBVyxDQUFDLENBQUM7UUFDakIsaUJBQVksR0FBUyxJQUFJLENBQUM7SUE2QnRDLENBQUM7SUE1QkcsS0FBSztRQUNELE9BQU8sQ0FBQyxHQUFHLENBQUMsd0JBQXdCLENBQUMsQ0FBQztJQUcxQyxDQUFDO0lBRUQsTUFBTTtRQUVGLElBQUksQ0FBQyxLQUFLLElBQUksa0JBQUksQ0FBQyxTQUFTLENBQUM7UUFDN0IsSUFBRyxJQUFJLENBQUMsS0FBSyxHQUFHLElBQUksQ0FBQyxVQUFVLEVBQy9CO1lBQ0ksSUFBSSxDQUFDLEtBQUssR0FBRyxDQUFDLENBQUM7WUFDZixJQUFJLENBQUMsWUFBWSxHQUFHLENBQUMsSUFBSSxDQUFDLFlBQVksQ0FBQztTQUMxQztRQUNELElBQUcsSUFBSSxDQUFDLFlBQVksSUFBSSxJQUFJLEVBQzVCO1lBQ0ksY0FBYztZQUNkLElBQUksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxZQUFZLEdBQUcsa0JBQUksQ0FBQyxTQUFTLEVBQUUsSUFBSSxDQUFDLFlBQVksR0FBQyxrQkFBSSxDQUFDLFNBQVMsRUFBRSxDQUFDLENBQUMsQ0FBQztTQUNyRzthQUVEO1lBQ0ksZ0JBQWdCO1lBQ2hCLElBQUksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxHQUFHLElBQUksQ0FBQyxZQUFZLEdBQUcsa0JBQUksQ0FBQyxTQUFTLEVBQUUsQ0FBQyxDQUFDLEdBQUcsSUFBSSxDQUFDLFlBQVksR0FBQyxrQkFBSSxDQUFDLFNBQVMsRUFBRSxDQUFDLENBQUMsQ0FBQztTQUUvRztJQUVMLENBQUM7Q0FFSjtBQXBDRCwyQkFvQ0MifQ==","assetPath":"Assets/Script/Movement.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"movingTime","type":"System.Single","isArray":false,"initValue":["1"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"movingRnageX","type":"System.Single","isArray":false,"initValue":["0"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"movingRangeY","type":"System.Single","isArray":false,"initValue":["0"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"delta","type":"System.Single","isArray":false,"initValue":["0"],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Movement","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 96fccc695077098c70b1b083a62d9059
+  onlyWriteTrigger: 0
